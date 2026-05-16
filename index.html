@@ -249,20 +249,23 @@
           <span class="cl-label">Horario</span>
           <span>Lun – Sáb · 09:00 – 19:00</span>
         </div>
+        <button onclick="(mostrarToast('prueba de toast', 'success-color'))">click Me!</button>
+        <div id="contenedor-toast-test" class="toast-container"></div>
+
       </div>
 
-      <div class="contact-form reveal">
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form reveal" id="contactForm">
         <div class="form-group">
           <label>Nombre completo</label>
-          <input type="text" placeholder="Tu nombre" />
+          <input type="text" placeholder="Tu nombre" name="name"/>
         </div>
         <div class="form-group">
           <label>Correo electrónico</label>
-          <input type="email" placeholder="tu@correo.com" />
+          <input type="email" placeholder="tu@correo.com" name="email"/>
         </div>
         <div class="form-group">
           <label>¿Qué necesitas?</label>
-          <select>
+          <select name="service">
             <option value="">Selecciona una opción</option>
             <option>Comprar un equipo / componente</option>
             <option>Mantención de PC o laptop</option>
@@ -272,16 +275,18 @@
             <option>Desarrollo de página web</option>
             <option>Otro</option>
           </select>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea rows="4" placeholder="Cuéntanos más sobre lo que necesitas..." name="message"></textarea>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Mensaje</label>
-          <textarea rows="4" placeholder="Cuéntanos más sobre lo que necesitas..."></textarea>
-        </div>
-        <button class="form-submit" onclick="handleSubmit(event)">Enviar consulta →</button>
-      </div>
+        <button class="form-submit" type="submit" >Enviar consulta →</button>
+        <div id="contenedor-toast" class="toast-container"></div>
+      </form>
     </div>
   </div>
 </section>
+
 
 <!-- FOOTER -->
 <footer>
